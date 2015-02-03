@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Play to Kodi</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+                <img alt="Play to Kodi" src="img/icon.png">
+            </a>
+            <a class="navbar-brand" href="#">Play to Kodi</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">Setting Up</a></li>
+                <li class="active"><a href="#">FAQ</a></li>
+                <li><a href="https://github.com/khloke/play-to-xbmc-chrome">Source</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <div class="row">
+        <div class="page-header"><h1>Frequently Asked Questions</h1></div>
+        <div class="panel panel-default">
+            <div class="panel-heading"><strong>Q: I can't play Vevo videos on YouTube!</strong></div>
+            <div class="panel-body">
+                A: Most Vevo videos on YouTube have some kind of licensing restriction associated with it, which is the reason why they can't be played on Kodi by default. To play these videos,
+                you will have to install the <a href="http://forum.kodi.tv/showthread.php?tid=200295"><strong>Bromix Repository</strong></a> add-on for Kodi. This repository includes a version
+                of the YouTube add-on that has been updated to play Vevo videos. To install, download the Bromix repository zip file and do the following:
+                <div class="well">
+                    In Kodi:
+                    <ol>
+                        <li>Navigate to System > Settings > Add-ons</li>
+                        <li>Select <strong>Install from zip file</strong></li>
+                        <li>Navigate to the zip file you just downloaded</li>
+                        <li>Hit OK</li>
+                        <li>Wait a few minutes for Kodi to download the necessary add-ons</li>
+                        <li>Finished!</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading"><strong>Q: Please make an Android version!</strong></div>
+            <div class="panel-body">
+                A: There's already an app called <a href="https://play.google.com/store/apps/details?id=org.leetzone.android.yatsewidgetfree">Yatse</a> that does the same thing and more! If
+                you have the app installed, simply "Share" the YouTube video from the YouTube app to Yatse and it will play it on Kodi.
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading"><strong>Q: Vimeo doesn't work anymore, please fix it!</strong></div>
+            <div class="panel-body">
+                A: This is actually a problem with the Vimeo add-on on Kodi. It looks like the developer of that add-on had already abandoned the project, so I don't expect it to be fixed
+                anytime soon. I had removed Vimeo from the list of supported sites. That means I won't be supporting Vimeo until someone fixes or creates a new Vimeo add-on that works.
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading"><strong>Q: Can you add a feature to display the current Queue list in the extension?</strong></div>
+            <div class="panel-body">
+                A: I would love to, but I can't. This is a problem with the way add-ons work on Kodi. When queueing an online video on Kodi to played on a specific add-on, a video ID (taken
+                from the web page) and the add-on's name is sent to Kodi to be queued. The problem with that is Kodi doesn't know what the title of the video is until it is played because
+                the add-on is not run until it is played. So when a bunch of online videos are queued on Kodi, and the extension requests the playlist Kodi, Kodi would only
+                return a list of videos with no names, therefore making is pretty much useless.
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading"><strong>Q: Can you make the extension send Wake-On-Lan packets?</strong></div>
+            <div class="panel-body">
+                A: No, unfortunately. The extensions API on Chrome does not provide anything that would allow that to happen.
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading"><strong>Q: The button next to the URL box takes up space, can you remove it?</strong></div>
+            <div class="panel-body">
+                A: No, because there are remote control buttons that are useful even when the current page doesn't have any playable videos. If you don't like it, you can hide it by right
+                clicking on the button and click "Hide button".
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading"><strong>Q: How do I make sure I stream 720p/1080p videos from YouTube?</strong></div>
+            <div class="panel-body">
+                A: This is controlled by the YouTube add-on on Kodi. You can set this by navigating to Videos > Add-ons. Move your cursor to YouTube, and hit "c" on your keyboard, then
+                select "Add-on settings". Change "Video Quality" to whatever you want.
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading"><strong>Q: It would be great if I could queue a playlist.</strong></div>
+            <div class="panel-body">
+                A: Fortunately for you, you already can! If you're current viewing a playlist or playing a playlist on YouTube, simply click on the extension, click on the dropdown next
+                to +Favourite and click "Queue Playlist"!
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
